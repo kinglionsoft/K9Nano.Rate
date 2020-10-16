@@ -23,8 +23,24 @@ namespace K9Nano.RateGate.Internals
         {
             return _cache.GetOrAdd(name, key =>
             {
+                var options = _optionsMonitor.Get(name);
+                if (options == null)
+                {
+                    throw new ArgumentException($"No RateLimitOptions named {name} found");
+                }
+
                 var store = _serviceProvider.GetRequiredService<IRateStore>();
-                IRateManager manager = new RateManager(name, store);
+                IRateManager manager = new RateManager(name, options, store);
+                return manager;
+            });
+        }
+
+        public IRateManager Create(string name, RateLimitOptions options)
+        {
+            return _cache.GetOrAdd(name, key =>
+            {
+                var store = _serviceProvider.GetRequiredService<IRateStore>();
+                IRateManager manager = new RateManager(name, options, store);
                 return manager;
             });
         }

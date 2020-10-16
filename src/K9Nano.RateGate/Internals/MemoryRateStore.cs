@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Microsoft.Extensions.Options;
 
 namespace K9Nano.RateGate.Internals
 {
@@ -13,7 +12,7 @@ namespace K9Nano.RateGate.Internals
         private readonly Dictionary<string, RateEntity> _data;
 #endif
 
-        public MemoryRateStore(IOptionsMonitor<RateLimitOptions> optionsMonitor) : base(optionsMonitor)
+        public MemoryRateStore()
         {
             _data = new Dictionary<string, RateEntity>();
         }

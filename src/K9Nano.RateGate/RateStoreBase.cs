@@ -1,25 +1,11 @@
 ﻿using System;
-using Microsoft.Extensions.Options;
 
 namespace K9Nano.RateGate
 {
     public abstract class RateStoreBase: IRateStore
     {
-        protected readonly IOptionsMonitor<RateLimitOptions> OptionsMonitor;
-
-        protected RateStoreBase(IOptionsMonitor<RateLimitOptions> optionsMonitor)
+        public virtual bool TryIncrement(string name, RateLimitOptions options)
         {
-            OptionsMonitor = optionsMonitor;
-        }
-        
-        public virtual bool TryIncrement(string name)
-        {
-            var options = OptionsMonitor.Get(name);
-            if (options == null)
-            {
-                throw new ArgumentException($"No RateLimitOptions named {name} found");
-            }
-
             var entity = Get(name);
 
             if (entity == null)

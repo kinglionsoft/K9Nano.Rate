@@ -2,6 +2,6 @@
 {
     public interface IRateStore
     {
-        bool TryIncrement(string name);
+        bool TryIncrement(string name, RateLimitOptions options);
     }
 }
