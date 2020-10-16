@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C41D72C4-3900-4AAB-AF51-FBA611A190C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{CE4866E8-AAB6-4ED2-9C8F-B5575000D44C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C140D72C-58C3-40B6-A7E5-69786FC8B823}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "K9Nano.RateGate", "src\K9Nano.RateGate\K9Nano.RateGate.csproj", "{D809DC92-7859-44CB-A7FA-4BD656363419}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RateTest", "test\RateTest\RateTest.csproj", "{B5E0A381-AB5C-4B27-9D61-BE27AA4F7AE5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D809DC92-7859-44CB-A7FA-4BD656363419}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D809DC92-7859-44CB-A7FA-4BD656363419}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D809DC92-7859-44CB-A7FA-4BD656363419}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D809DC92-7859-44CB-A7FA-4BD656363419}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5E0A381-AB5C-4B27-9D61-BE27AA4F7AE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5E0A381-AB5C-4B27-9D61-BE27AA4F7AE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5E0A381-AB5C-4B27-9D61-BE27AA4F7AE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5E0A381-AB5C-4B27-9D61-BE27AA4F7AE5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D809DC92-7859-44CB-A7FA-4BD656363419} = {C41D72C4-3900-4AAB-AF51-FBA611A190C8}
+		{B5E0A381-AB5C-4B27-9D61-BE27AA4F7AE5} = {CE4866E8-AAB6-4ED2-9C8F-B5575000D44C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF26E53F-74A6-4CD0-8EA9-D0597E62CC5D}
+	EndGlobalSection
+EndGlobal
