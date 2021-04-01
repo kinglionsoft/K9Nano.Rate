@@ -9,4 +9,4 @@ A lightweight component of rate limiting for non-strict scenarios;
 
 * Quick usage
 
-* More samples in [test\SagaTest]([.\test\SagaTest)
+* More samples in [test\RateTest]([.\test\RateTest)
